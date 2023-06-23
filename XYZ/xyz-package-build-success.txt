@@ -1,0 +1,365 @@
+Started by upstream project "xyz-pipeline" build number 5
+originally caused by:
+ Started by user Zayeed Chowdhury
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/xyz-package
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential GitHubCreds
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/xyz-package/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/zayeed-amd/XYZ-Technologies.git # timeout=10
+Fetching upstream changes from https://github.com/zayeed-amd/XYZ-Technologies.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_SSH to set credentials github
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- https://github.com/zayeed-amd/XYZ-Technologies.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision f29404435a5f1c0fb19d07d504c11a4e67e1d655 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f29404435a5f1c0fb19d07d504c11a4e67e1d655 # timeout=10
+Commit message: "Create build_commands.txt"
+ > git rev-list --no-walk 02121c875b59120eae7264588dfe428d9508ba6f # timeout=10
+[xyz-package] $ mvn package
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.xyz:XYZtechnologies[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding adminModule 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.6:prepare-agent[m [1m(jacoco-initialize)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/var/lib/jenkins/workspace/xyz-package/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/xyz-package/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/xyz-package/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /var/lib/jenkins/workspace/xyz-package/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.xyz.dataAccessObject.AdminDataImpTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:3.2.2:war[m [1m(default-war)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [XYZtechnologies] in [/var/lib/jenkins/workspace/xyz-package/target/XYZtechnologies-1.0]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/var/lib/jenkins/workspace/xyz-package/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [249 msecs]
+[[1;34mINFO[m] Building war: /var/lib/jenkins/workspace/xyz-package/target/XYZtechnologies-1.0.war
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.6:report[m [1m(jacoco-site)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /var/lib/jenkins/workspace/xyz-package/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'adminModule' with 2 classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.169 s
+[[1;34mINFO[m] Finished at: 2023-06-23T03:58:39Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xyz-package] $ /bin/sh -xe /tmp/jenkins4568665736837594521.sh
++ sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease
+Ign:5 https://pkg.jenkins.io/debian binary/ InRelease
+Hit:6 https://pkg.jenkins.io/debian binary/ Release
+Get:8 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Hit:7 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [724 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [15.3 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [418 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [932 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [20.5 kB]
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [501 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [129 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [10.3 kB]
+Fetched 3087 kB in 2s (1990 kB/s)
+Reading package lists...
+W: https://download.docker.com/linux/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: https://pkg.jenkins.io/debian/binary/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
++ sudo apt-get install -y ansible
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ansible is already the newest version (2.10.7+merged+base+2.10.8+dfsg-1).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
+[xyz-package] $ /bin/sh -xe /tmp/jenkins3428885597756956946.sh
++ JENKINS_HOME=/var/lib/jenkins
++ ansible-playbook install-pre-reqs.yaml
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+PLAY [Install JDK 11, Maven, and Docker] ***************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [Install OpenJDK 11] ******************************************************
+ok: [localhost]
+
+TASK [Install Maven] ***********************************************************
+ok: [localhost]
+
+TASK [Add Docker GPG key] ******************************************************
+ok: [localhost]
+
+TASK [Add Docker repository] ***************************************************
+ok: [localhost]
+
+TASK [Install Docker] **********************************************************
+ok: [localhost]
+
+TASK [Start Docker service] ****************************************************
+ok: [localhost]
+
+TASK [Change permissions for Docker socket] ************************************
+changed: [localhost]
+
+TASK [Restart Docker service] **************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
++ tar xz -C /tmp
++ uname -s
++ curl --silent --location https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz
++ sudo mv /tmp/eksctl /usr/local/bin
++ eksctl version
+0.145.0
++ sudo apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Ign:5 https://pkg.jenkins.io/debian binary/ InRelease
+Hit:6 https://pkg.jenkins.io/debian binary/ Release
+Hit:7 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:8 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [724 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [932 kB]
+Fetched 1882 kB in 1s (1832 kB/s)
+Reading package lists...
+W: https://pkg.jenkins.io/debian/binary/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: https://download.docker.com/linux/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
++ sudo apt-get install awscli -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+awscli is already the newest version (1.22.34-1).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
++ aws --version
+aws-cli/1.22.34 Python/3.10.6 Linux/5.19.0-1027-aws botocore/1.23.34
++ sudo rm -rf /var/lib/jenkins/.aws
++ mkdir /var/lib/jenkins/.aws
++ cat
++ cat /var/lib/jenkins/.aws/credentials
+[default]
+aws_access_key_id = AKIAY2YEVTFAV34OLEWP
+aws_secret_access_key = ****
++ sudo rm -rf /home/ubuntu/.aws
++ sudo cp -f /var/lib/jenkins/.aws/credentials /home/ubuntu/.aws
++ aws eks update-kubeconfig --name=k8s-cluster --region=us-east-1
+Updated context arn:aws:eks:us-east-1:607210805569:cluster/k8s-cluster in /var/lib/jenkins/.kube/config
++ sudo apt-get install -y ca-certificates curl
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20230311ubuntu0.22.04.1).
+curl is already the newest version (7.81.0-1ubuntu1.10).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
++ curl+  -fsSLsudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg --yes
+ https://packages.cloud.google.com/apt/doc/apt-key.gpg
++ echo deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
++ sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
++ sudo apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Hit:5 https://download.docker.com/linux/ubuntu bionic InRelease
+Ign:6 https://pkg.jenkins.io/debian binary/ InRelease
+Hit:7 https://pkg.jenkins.io/debian binary/ Release
+Hit:8 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Fetched 108 kB in 1s (130 kB/s)
+Reading package lists...
+W: https://download.docker.com/linux/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: https://pkg.jenkins.io/debian/binary/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
++ sudo apt-get install -y kubectl
+Reading package lists...
+Building dependency tree...
+Reading state information...
+kubectl is already the newest version (1.27.3-00).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
++ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 44.4M  100 44.4M    0     0  89.9M      0 --:--:-- --:--:-- --:--:-- 90.1M
++ sudo chmod +x kubectl
++ sudo mv ./kubectl /usr/bin/kubectl
++ kubectl version --client
+Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.6", GitCommit:"ad3338546da947756e8a88aa6822e9c11e7eac22", GitTreeState:"clean", BuildDate:"2022-04-14T08:49:13Z", GoVersion:"go1.17.9", Compiler:"gc", Platform:"linux/amd64"}
++ kubectl config get-contexts
+CURRENT   NAME                                                     CLUSTER                                                  AUTHINFO                                                 NAMESPACE
+*         arn:aws:eks:us-east-1:607210805569:cluster/k8s-cluster   arn:aws:eks:us-east-1:607210805569:cluster/k8s-cluster   arn:aws:eks:us-east-1:607210805569:cluster/k8s-cluster   
+[xyz-package] $ /bin/sh -xe /tmp/jenkins5771251655025604724.sh
++ JENKINS_HOME=/var/lib/jenkins
++ docker build -t zayeed91/tomcat-server-xyz-technologies:1.0.0 .
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 530B done
+#2 DONE 0.0s
+
+#3 [auth] library/tomcat:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/tomcat:latest
+#4 DONE 0.2s
+
+#5 [1/4] FROM docker.io/library/tomcat:latest@sha256:68c75d6f643ba2d68d145255e7e8d82ff90960bd2f33507a94d35a44c33007bf
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 7.13MB 0.1s done
+#6 DONE 0.1s
+
+#7 [2/4] RUN rm -rf /usr/local/tomcat/webapps/*
+#7 CACHED
+
+#8 [3/4] COPY target/XYZtechnologies-1.0.war /usr/local/tomcat/webapps/XYZtechnologies.war
+#8 DONE 0.8s
+
+#9 [4/4] RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+#9 DONE 1.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:0c611ecb8568926af04ebd43261a88ce37321a6ff9bada94973d5ae3b1d419a7 done
+#10 naming to docker.io/zayeed91/tomcat-server-xyz-technologies:1.0.0 done
+#10 DONE 0.2s
++ docker login --username=zayeed91 --password=****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
++ docker push zayeed91/tomcat-server-xyz-technologies:1.0.0
+The push refers to repository [docker.io/zayeed91/tomcat-server-xyz-technologies]
+964889ea6e5b: Preparing
+451cbba69964: Preparing
+5f70bf18a086: Preparing
+be601967c1cd: Preparing
+0b5428e2647d: Preparing
+5e6eda06088c: Preparing
+c8c610244b65: Preparing
+2a025b4a8de9: Preparing
+35a8360e0628: Preparing
+cdd7c7392317: Preparing
+5e6eda06088c: Waiting
+c8c610244b65: Waiting
+2a025b4a8de9: Waiting
+35a8360e0628: Waiting
+cdd7c7392317: Waiting
+be601967c1cd: Layer already exists
+0b5428e2647d: Layer already exists
+5f70bf18a086: Layer already exists
+5e6eda06088c: Layer already exists
+2a025b4a8de9: Layer already exists
+c8c610244b65: Layer already exists
+35a8360e0628: Layer already exists
+cdd7c7392317: Layer already exists
+964889ea6e5b: Pushed
+451cbba69964: Pushed
+1.0.0: digest: sha256:a21521df80671d7649cc7038fa664b5b0e869f53d5bb5bce54b5d613ec8e130a size: 2416
++ cat k8s/deploy.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: xyztechnologies-app
+  name: xyztechnologies-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xyztechnologies-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: xyztechnologies-app
+    spec:
+      containers:
+      - image: zayeed91/tomcat-server-xyz-technologies:1.0.0
+        name: tomcat-server-xyz-technologies
+        resources: {}
+status: {}
++ cat k8s/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: xyztechnologies-app
+  name: xyztechnologies-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 32002
+  selector:
+    app: xyztechnologies-app
+  type: NodePort
+status:
+  loadBalancer: {}
++ ansible-playbook k8s-deploy-svc.yaml
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+PLAY [Run kubectl apply] *******************************************************
+
+TASK [Apply Deployment YAML] ***************************************************
+changed: [localhost]
+
+TASK [Apply Service YAML] ******************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS
