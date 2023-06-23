@@ -1,0 +1,68 @@
+Started by upstream project "xyz-pipeline" build number 5
+originally caused by:
+ Started by user Zayeed Chowdhury
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/xyz-test
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential GitHubCreds
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/xyz-test/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/zayeed-amd/XYZ-Technologies.git # timeout=10
+Fetching upstream changes from https://github.com/zayeed-amd/XYZ-Technologies.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_SSH to set credentials github
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- https://github.com/zayeed-amd/XYZ-Technologies.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision f29404435a5f1c0fb19d07d504c11a4e67e1d655 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f29404435a5f1c0fb19d07d504c11a4e67e1d655 # timeout=10
+Commit message: "Create build_commands.txt"
+ > git rev-list --no-walk 02121c875b59120eae7264588dfe428d9508ba6f # timeout=10
+[xyz-test] $ mvn test
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.xyz:XYZtechnologies[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding adminModule 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.6:prepare-agent[m [1m(jacoco-initialize)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/var/lib/jenkins/workspace/xyz-test/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/xyz-test/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/xyz-test/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mXYZtechnologies[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /var/lib/jenkins/workspace/xyz-test/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.xyz.dataAccessObject.AdminDataImpTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.138 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  3.033 s
+[[1;34mINFO[m] Finished at: 2023-06-23T03:58:22Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Finished: SUCCESS
